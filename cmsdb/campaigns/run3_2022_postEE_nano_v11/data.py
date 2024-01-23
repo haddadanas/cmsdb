@@ -58,6 +58,56 @@ cpn.add_dataset(
 )
 
 #
+# Tau
+#
+
+cpn.add_dataset(
+    name="data_tau_e",
+    id=14672439,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2022E-ReRecoNanoAODv11-v1/NANOAOD",
+    ],
+    n_files=23,
+    n_events=29522661,
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_tau_f",
+    id=14576637,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2022F-PromptNanoAODv11_v1-v2/NANOAOD",
+    ],
+    n_files=76,
+    n_events=115720237,
+    aux={
+        "era": "F",
+    },
+)
+
+cpn.add_dataset(
+    name="data_tau_g",
+    id=14576539,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2022G-PromptNanoAODv11_v1-v2/NANOAOD",
+    ],
+    n_files=12,
+    n_events=17838713,
+    aux={
+        "era": "G",
+    },
+)
+
+
+#
 # E/Gamma
 #
 
