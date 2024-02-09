@@ -14,14 +14,14 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v11 import campaign_run3_2022_preEE_na
 
 cpn.add_dataset(
     name="data_mu_a",
-    id=14665093,
+    id=14783253,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2022A-ReRecoNanoAODv11-v1/NANOAOD",
+        "/DoubleMuon/Run2022A-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=5,
-    n_events=75655,
+    n_files=4,
+    n_events=25309,
     aux={
         "era": "A",
     },
@@ -29,44 +29,29 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_mu_b",
-    id=14665444,
+    id=14784149,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2022B-ReRecoNanoAODv11-v1/NANOAOD",
+        "/DoubleMuon/Run2022B-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=8,
-    n_events=5328210,
+    n_files=7,
+    n_events=929009,
     aux={
         "era": "B",
     },
 )
 
-# cpn.add_dataset(
-#     name="data_mu_c",
-#     id=14665675,
-#     is_data=True,
-#     processes=[procs.data_mu],
-#     keys=[
-#         "/SingleMuon/Run2022C-ReRecoNanoAODv11-v1/NANOAOD",
-#     ],
-#     n_files=16,
-#     n_events=20164673,
-#     aux={
-#         "era": "C",
-#     },
-# )
-
 cpn.add_dataset(
     name="data_mu_c",
-    id=14670816,
+    id=14853248,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon/Run2022C-ReRecoNanoAODv11-v1/NANOAOD",
+        "/Muon/Run2022C-16Dec2023-v1/NANOAOD",  # noqa
     ],
-    n_files=85,
-    n_events=138018846,
+    n_files=91,
+    n_events=138281764,
     aux={
         "era": "C",
     },
