@@ -5,7 +5,7 @@ CMS datasets from the 2022 pre-EE data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2022_preEE_nano_v11 import campaign_run3_2022_preEE_nano_v11 as cpn
+from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_nano_v12 as cpn
 
 
 #
@@ -44,14 +44,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_mu_c",
-    id=14853248,
+    id=14784127,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon/Run2022C-16Dec2023-v1/NANOAOD",  # noqa
+        "/Muon/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=91,
-    n_events=138281764,
+    n_files=124,
+    n_events=138427345,
     aux={
         "era": "C",
     },
@@ -59,14 +59,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_mu_d",
-    id=14665037,
+    id=14783357,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon/Run2022D-ReRecoNanoAODv11-v1/NANOAOD",
+        "/Muon/Run2022D-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=55,
-    n_events=75494657,
+    n_files=82,
+    n_events=75468381,
     aux={
         "era": "D",
     },
