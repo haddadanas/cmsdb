@@ -13,36 +13,6 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 #
 
 cpn.add_dataset(
-    name="data_mu_a",
-    id=14783253,
-    is_data=True,
-    processes=[procs.data_mu],
-    keys=[
-        "/DoubleMuon/Run2022A-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=4,
-    n_events=25309,
-    aux={
-        "era": "A",
-    },
-)
-
-cpn.add_dataset(
-    name="data_mu_b",
-    id=14784149,
-    is_data=True,
-    processes=[procs.data_mu],
-    keys=[
-        "/DoubleMuon/Run2022B-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=7,
-    n_events=929009,
-    aux={
-        "era": "B",
-    },
-)
-
-cpn.add_dataset(
     name="data_mu_c",
     id=14784127,
     is_data=True,
@@ -71,6 +41,42 @@ cpn.add_dataset(
         "era": "D",
     },
 )
+
+
+#
+# Tau
+#
+
+cpn.add_dataset(
+    name="data_tau_c",
+    id=14784173,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=34,
+    n_events=25875389,
+    aux={
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_tau_d",
+    id=14783294,
+    is_data=True,
+    processes=[procs.data_tau],
+    keys=[
+        "/Tau/Run2022D-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=26,
+    n_events=16686692,
+    aux={
+        "era": "D",
+    },
+)
+
 
 #
 # E/Gamma

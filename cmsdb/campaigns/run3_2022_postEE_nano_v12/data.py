@@ -63,14 +63,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_tau_e",
-    id=14672439,
+    id=14784498,
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2022E-ReRecoNanoAODv11-v1/NANOAOD",
+        "/Tau/Run2022F-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=23,
-    n_events=29522661,
+    n_files=233,
+    n_events=115472800,
     aux={
         "era": "E",
     },
@@ -78,14 +78,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_tau_f",
-    id=14576637,
+    id=14784442,
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2022F-PromptNanoAODv11_v1-v2/NANOAOD",
+        "/Tau/Run2022G-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=76,
-    n_events=115720237,
+    n_files=36,
+    n_events=17838713,
     aux={
         "era": "F",
     },
@@ -93,14 +93,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_tau_g",
-    id=14576539,
+    id=14784151,
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2022G-PromptNanoAODv11_v1-v2/NANOAOD",
+        "/Tau/Run2022E-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=12,
-    n_events=17838713,
+    n_files=48,
+    n_events=30522105,
     aux={
         "era": "G",
     },
