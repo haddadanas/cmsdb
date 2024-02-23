@@ -88,6 +88,18 @@ cpn.add_dataset(
     n_events=115472800,
     aux={
         "era": "F",
+        "bad_files": [
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/50000/aa5d0a1d-ce4d-4a6d-913f-9cda23b3a22a.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/2540000/690ae9e3-b88f-4165-938a-33fc8ccc253b.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/50000/bf6a427f-00ba-4324-8dbf-d008da584f10.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/30000/4516186e-0fab-41ba-a86c-67423c0fb483.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/30000/1de9b504-522b-43cf-949a-3fae7b04f6f1.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/2540000/2ab5909f-66c1-4fc5-b7c2-f9173d4dc6df.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/2540000/761ebafd-4d5d-4bc6-9d55-1c06752e1ffc.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/50000/82b002ac-5f79-4b66-8100-5169a0ed34b6.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/2540000/0b171ae3-b87f-482f-89d7-27b5eab6b802.root",
+            "/store/data/Run2022F/Tau/NANOAOD/22Sep2023-v1/50000/5618dea1-6308-4485-9ee1-8abf9eeaf34a.root",
+        ],
     },
 )
 
@@ -103,6 +115,9 @@ cpn.add_dataset(
     n_events=17838713,
     aux={
         "era": "G",
+        "bad_files": [
+            "/store/data/Run2022G/Tau/NANOAOD/22Sep2023-v1/30000/926604d0-2c69-4a09-8eab-0636e26b0ac9.root",
+        ],
     },
 )
 
