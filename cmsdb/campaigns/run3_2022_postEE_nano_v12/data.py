@@ -84,7 +84,7 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2022F-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=233,
+    n_files=223,  # 233 - 10
     n_events=115472800,
     aux={
         "era": "F",
@@ -111,7 +111,7 @@ cpn.add_dataset(
     keys=[
         "/Tau/Run2022G-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=36,
+    n_files=35,  # 36 - 1
     n_events=17838713,
     aux={
         "era": "G",
