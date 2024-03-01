@@ -13,110 +13,81 @@ from cmsdb.campaigns.run3_2023_nano_v12 import campaign_run3_2023_nano_v12 as cp
 #
 
 cpn.add_dataset(
-    name="data_mu_a",
-    id=14667989,
+    name="data_mu_c_1",
+    id=14786982,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon0/Run2023A-PromptNanoAODv11p9_v2-v1/NANOAOD",  # noqa
+        "/Muon0/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
     ],
-    n_files=1,
-    n_events=41,
-    aux={
-        "era": "A",
-    },
-)
-
-cpn.add_dataset(
-    name="data_mu_b",
-    id=14782587,
-    is_data=True,
-    processes=[procs.data_mu],
-    keys=[
-        "/Muon0/Run2023B-18Sep2023-v2/NANOAOD",  # noqa
-    ],
-    n_files=20,
-    n_events=17453684,
-    aux={
-        "era": "B",
-    },
-)
-
-cpn.add_dataset(
-    name="data_mu_c",
-    id=14787055,
-    is_data=True,
-    processes=[procs.data_mu],
-    keys=[
-        "/Muon0/Run2023C-22Sep2023_v1-v1/NANOAOD",  # noqa
-    ],
-    n_files=90,
-    n_events=54715896,
-    aux={
+    n_files=165,
+    n_events=138943783,
+    aus={
         "era": "C",
     },
 )
 
 cpn.add_dataset(
-    name="data_mu_d",
-    id=14882753,
+    name="data_mu_c_2",
+    id=14787027,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon0/Run2023D-24Jan2024_v2-v1/NANOAOD",  # noqa
+        "/Muon1/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
     ],
-    n_files=17,
-    n_events=21413464,
-    aux={
+    n_files=131,
+    n_events=101615754,
+    aus={
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_mu_d_1",
+    id=14787686,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/Muon0/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa
+    ],
+    n_files=32,
+    n_events=21462916,
+    aus={
         "era": "D",
     },
 )
 
 cpn.add_dataset(
-    name="data_mu_e",
-    id=14763168,
+    name="data_mu_d_2",
+    id=14786997,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon/Run2023E-PromptReco-v1/NANOAOD",
+        "/Muon1/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa
     ],
-    n_files=41,
-    n_events=8078002,
-    aux={
-        "era": "E",
+    n_files=30,
+    n_events=21463645,
+    aus={
+        "era": "D",
     },
 )
+
 
 #
 # Tau
 #
 
 cpn.add_dataset(
-    name="data_tau_b",
-    id=14784897,
-    is_data=True,
-    processes=[procs.data_tau],
-    keys=[
-        "/Tau/Run2023B-22Sep2023-v1/NANOAOD",
-    ],
-    n_files=11,
-    n_events=3680520,
-    aux={
-        "era": "B",
-    },
-)
-
-cpn.add_dataset(
     name="data_tau_c",
-    id=14826261,
+    id=14786972,
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2023C-22Sep2023_v1-v2/NANOAOD",
+        "/Tau/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa
     ],
-    n_files=25,
-    n_events=14484171,
-    aux={
+    n_files=70,
+    n_events=45176805,
+    aus={
         "era": "C",
     },
 )
@@ -127,11 +98,11 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_tau],
     keys=[
-        "/Tau/Run2023D-22Sep2023_v2-v1/NANOAOD",
+        "/Tau/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa
     ],
     n_files=13,
     n_events=7246202,
-    aux={
+    aus={
         "era": "D",
     },
 )
