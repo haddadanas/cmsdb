@@ -128,14 +128,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_egamma_e",
-    id=14670601,
+    id=14783260,
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma/Run2022E-ReRecoNanoAODv11-v1/NANOAOD",
+        "/EGamma/Run2022E-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=99,
-    n_events=149463867,
+    n_files=188,
+    n_events=148654795,
     aux={
         "era": "E",
     },
@@ -143,14 +143,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_egamma_f",
-    id=14579815,
+    id=14784299,
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma/Run2022F-PromptNanoAODv11_v1-v2/NANOAOD",
+        "/EGamma/Run2022F-22Sep2023-v1/NANOAOD",  # noqa
     ],
-    n_files=343,
-    n_events=464472966,
+    n_files=490,
+    n_events=464373259,
     aux={
         "era": "F",
     },
@@ -158,14 +158,14 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_egamma_g",
-    id=14579488,
+    id=14826525,
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma/Run2022G-PromptNanoAODv11_v1-v2/NANOAOD",
+        "/EGamma/Run2022G-22Sep2023-v2/NANOAOD",  # noqa
     ],
-    n_files=60,
-    n_events=76828141,
+    n_files=87,
+    n_events=76807350,
     aux={
         "era": "G",
     },
