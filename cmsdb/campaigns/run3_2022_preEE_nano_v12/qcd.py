@@ -9,386 +9,242 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 
 
 #
-# QCD flat samples
+# QCD (pythia, pt-binned, muon enriched)
 #
 
-# GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22GS&nanoaod_version=v11&dataset=QCD_PT-15*Flat2018&chained_request=Premix  # noqa
-cpn.add_dataset(
-    name="qcd_flat2018_pythia",
-    id=14636176,
-    is_data=False,
-    processes=[procs.qcd_flat],
-    keys=[
-        "/QCD_PT-15_TuneCP5_Flat2018_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=8,
-    n_events=9251295,
-)
-
-# GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22GS&nanoaod_version=v11&dataset=QCD_PT-15*Flat2018&chained_request=EpsilonPU  # noqa
-cpn.add_dataset(
-    name="qcd_flat2018_epsilon_pu_pythia",
-    id=14685183,
-    is_data=False,
-    processes=[procs.qcd_flat],
-    keys=[
-        "/QCD_PT-15to7000_TuneCP5_Flat2018_13p6TeV_pythia8/Run3Summer22NanoAODv11-EpsilonPU_126X_mcRun3_2022_realistic_v2-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=3,
-    n_events=499387,
-)
-
-
-#
-# QCD (MadGraph HT-binned)
-#
-
-# missing as of 2023-07-01
-
-
-#
-# QCD (Pythia pT-binned)
-#
-
-# GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22GS&nanoaod_version=v11&dataset=QCD_PT-*%28to*%29%3F0_TuneCP5&chained_request=Premix  # noqa
-
-cpn.add_dataset(
-    name="qcd_pt15to30_pythia",
-    id=14689890,
-    is_data=False,
-    processes=[procs.qcd_pt15to30],
-    keys=[
-        "/QCD_PT-15to30_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=1149000,
-)
-
-cpn.add_dataset(
-    name="qcd_pt30to50_pythia",
-    id=14689122,
-    is_data=False,
-    processes=[procs.qcd_pt30to50],
-    keys=[
-        "/QCD_PT-30to50_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=2,
-    n_events=1189766,
-)
-
-cpn.add_dataset(
-    name="qcd_pt50to80_pythia",
-    id=14693446,
-    is_data=False,
-    processes=[procs.qcd_pt50to80],
-    keys=[
-        "/QCD_PT-50to80_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=12,
-    n_events=19722512,
-)
-
-cpn.add_dataset(
-    name="qcd_pt80to120_pythia",
-    id=14694162,
-    is_data=False,
-    processes=[procs.qcd_pt80to120],
-    keys=[
-        "/QCD_PT-80to120_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=17,
-    n_events=29209440,
-)
-
-cpn.add_dataset(
-    name="qcd_pt120to170_pythia",
-    id=14693352,
-    is_data=False,
-    processes=[procs.qcd_pt120to170],
-    keys=[
-        "/QCD_PT-120to170_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=21,
-    n_events=29908875,
-)
-
-cpn.add_dataset(
-    name="qcd_pt170to300_pythia",
-    id=14694835,
-    is_data=False,
-    processes=[procs.qcd_pt170to300],
-    keys=[
-        "/QCD_PT-170to300_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=21,
-    n_events=28624020,
-)
-
-cpn.add_dataset(
-    name="qcd_pt300to470_pythia",
-    id=14694880,
-    is_data=False,
-    processes=[procs.qcd_pt300to470],
-    keys=[
-        "/QCD_PT-300to470_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=45,
-    n_events=57525303,
-)
-
-cpn.add_dataset(
-    name="qcd_pt470to600_pythia",
-    id=14693379,
-    is_data=False,
-    processes=[procs.qcd_pt470to600],
-    keys=[
-        "/QCD_PT-470to600_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=22,
-    n_events=27577568,
-)
-
-cpn.add_dataset(
-    name="qcd_pt600to800_pythia",
-    id=14694728,
-    is_data=False,
-    processes=[procs.qcd_pt600to800],
-    keys=[
-        "/QCD_PT-600to800_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=57,
-    n_events=66884777,
-)
-
-cpn.add_dataset(
-    name="qcd_pt800to1000_pythia",
-    id=14694323,
-    is_data=False,
-    processes=[procs.qcd_pt800to1000],
-    keys=[
-        "/QCD_PT-800to1000_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=35,
-    n_events=39451059,
-)
-
-cpn.add_dataset(
-    name="qcd_pt1000to1400_pythia",
-    id=14694841,
-    is_data=False,
-    processes=[procs.qcd_pt1000to1400],
-    keys=[
-        "/QCD_PT-1000to1400_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=21,
-    n_events=19882169,
-)
-
-cpn.add_dataset(
-    name="qcd_pt1400to1800_pythia",
-    id=14637819,
-    is_data=False,
-    processes=[procs.qcd_pt1400to1800],
-    keys=[
-        "/QCD_PT-1400to1800_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=8,
-    n_events=5836650,
-)
-
-cpn.add_dataset(
-    name="qcd_pt1800to2400_pythia",
-    id=14641606,
-    is_data=False,
-    processes=[procs.qcd_pt1800to2400],
-    keys=[
-        "/QCD_PT-1800to2400_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=4,
-    n_events=2989840,
-)
-
-cpn.add_dataset(
-    name="qcd_pt2400to3200_pythia",
-    id=14693239,
-    is_data=False,
-    processes=[procs.qcd_pt2400to3200],
-    keys=[
-        "/QCD_PT-2400to3200_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=3,
-    n_events=1963904,
-)
-
-cpn.add_dataset(
-    name="qcd_pt3200_pythia",
-    id=14645062,
-    is_data=False,
-    processes=[procs.qcd_pt3200],
-    keys=[
-        "/QCD_PT-3200_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2_ext1-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=1,
-    n_events=782175,
-)
-
-
-#
-# QCD (Pythia pT-binned, muon-enriched)
-#
-
-# GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22GS&nanoaod_version=v11&dataset=QCD_PT-*%28to*%29%3F_MuEnrichedPt5_TuneCP5&chained_request=Premix  # noqa
 
 cpn.add_dataset(
     name="qcd_mu_pt15to20_pythia",
-    id=14637754,
-    is_data=False,
+    id=14800053,
     processes=[procs.qcd_mu_pt15to20],
     keys=[
-        "/QCD_PT-15to20_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-15to20_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=4,
-    n_events=4529335,
+    n_files=38,
+    n_events=4417909,
 )
 
 cpn.add_dataset(
     name="qcd_mu_pt20to30_pythia",
-    id=14689998,
-    is_data=False,
+    id=14809799,
     processes=[procs.qcd_mu_pt20to30],
     keys=[
-        "/QCD_PT-20to30_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-20to30_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=19,
-    n_events=29845469,
+    n_files=71,
+    n_events=30200859,
 )
-
-# missing as of 2023-07-01
-# cpn.add_dataset(
-#     name="qcd_mu_pt30to50_pythia",
-#     id=None,
-#     is_data=False,
-#     processes=[procs.qcd_mu_pt30to50],
-#     keys=[
-#         "/QCD_PT-30to50_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
-#     ],
-#     n_files=None,
-#     n_events=None,
-# )
-
+cpn.add_dataset(
+    name="qcd_mu_pt30to50_pythia",
+    id=14805426,
+    processes=[procs.qcd_mu_pt30to50],
+    keys=[
+        "/QCD_PT-30to50_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=82,
+    n_events=33440507,
+)
 cpn.add_dataset(
     name="qcd_mu_pt50to80_pythia",
-    id=14694803,
-    is_data=False,
+    id=14791064,
     processes=[procs.qcd_mu_pt50to80],
     keys=[
-        "/QCD_PT-50to80_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-50to80_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=25,
-    n_events=41159366,
+    n_files=86,
+    n_events=40107069,
 )
-
 cpn.add_dataset(
     name="qcd_mu_pt80to120_pythia",
-    id=14625411,
-    is_data=False,
+    id=14797620,
     processes=[procs.qcd_mu_pt80to120],
     keys=[
-        "/QCD_PT-80to120_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-80to120_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=18,
-    n_events=25108328,
+    n_files=84,
+    n_events=24614026,
 )
-
 cpn.add_dataset(
     name="qcd_mu_pt120to170_pythia",
-    id=14686500,
-    is_data=False,
+    id=14791498,
     processes=[procs.qcd_mu_pt120to170],
     keys=[
-        "/QCD_PT-120to170_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-120to170_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=20,
-    n_events=18849346,
+    n_files=88,
+    n_events=18555616,
 )
-
 cpn.add_dataset(
     name="qcd_mu_pt170to300_pythia",
-    id=14687812,
-    is_data=False,
+    id=14798613,
     processes=[procs.qcd_mu_pt170to300],
     keys=[
-        "/QCD_PT-170to300_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-170to300_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=34,
-    n_events=36140731,
+    n_files=193,
+    n_events=36864921,
 )
-
-# missing as of 2023-07-01
-# cpn.add_dataset(
-#     name="qcd_mu_pt300to470_pythia",
-#     id=None,
-#     is_data=False,
-#     processes=[procs.qcd_mu_pt300to470],
-#     keys=[
-#         "/QCD_PT-300to470_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
-#     ],
-#     n_files=None,
-#     n_events=None,
-# )
-
+cpn.add_dataset(
+    name="qcd_mu_pt300to470_pythia",
+    id=14792060,
+    processes=[procs.qcd_mu_pt300to470],
+    keys=[
+        "/QCD_PT-300to470_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=64,
+    n_events=30226277,
+)
 cpn.add_dataset(
     name="qcd_mu_pt470to600_pythia",
-    id=14686361,
-    is_data=False,
+    id=14791997,
     processes=[procs.qcd_mu_pt470to600],
     keys=[
-        "/QCD_PT-470to600_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-470to600_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=21,
-    n_events=18066469,
+    n_files=58,
+    n_events=18567007,
 )
-
 cpn.add_dataset(
     name="qcd_mu_pt600to800_pythia",
-    id=14687893,
-    is_data=False,
+    id=14800405,
     processes=[procs.qcd_mu_pt600to800],
     keys=[
-        "/QCD_PT-600to800_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-600to800_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=19,
-    n_events=19989674,
+    n_files=107,
+    n_events=19723745,
 )
-
 cpn.add_dataset(
     name="qcd_mu_pt800to1000_pythia",
-    id=14620509,
-    is_data=False,
+    id=14808237,
     processes=[procs.qcd_mu_pt800to1000],
     keys=[
-        "/QCD_PT-800to1000_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-800to1000_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=44,
-    n_events=39272493,
+    n_files=86,
+    n_events=39316355,
 )
-
 cpn.add_dataset(
     name="qcd_mu_pt1000_pythia",
-    id=14694180,
-    is_data=False,
+    id=14796004,
     processes=[procs.qcd_mu_pt1000],
     keys=[
-        "/QCD_PT-1000_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv11-126X_mcRun3_2022_realistic_v2-v1/NANOAODSIM",  # noqa
+        "/QCD_PT-1000_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=17,
-    n_events=14214939,
+    n_files=64,
+    n_events=13705539,
 )
 
 
 #
-# QCD (Pythia pT-binned, EM-enriched)
+# QCD (pythia, pt-binned, electron enriched)
 #
 
-# GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22GS&nanoaod_version=v11&dataset=QCD_PT-*%28to*%29%3F_EMEnriched_TuneCP5&chained_request=Premix  # noqa
-# missing as of 2023-07-01 (only v10 available)
+
+cpn.add_dataset(
+    name="qcd_em_pt10to30_pythia",
+    id=14805335,
+    # processes=[procs.qcd_em_pt10to30],
+    keys=[
+        "/QCD_PT-10to30_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=49,
+    n_events=986169,
+)
+cpn.add_dataset(
+    name="qcd_em_pt30to50_pythia",
+    id=14808098,
+    processes=[procs.qcd_em_pt30to50],
+    keys=[
+        "/QCD_PT-30to50_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=21,
+    n_events=954720,
+)
+cpn.add_dataset(
+    name="qcd_em_pt50to80_pythia",
+    id=14792371,
+    processes=[procs.qcd_em_pt50to80],
+    keys=[
+        "/QCD_PT-50to80_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=24,
+    n_events=929811,
+)
+cpn.add_dataset(
+    name="qcd_em_pt80to120_pythia",
+    id=14801474,
+    processes=[procs.qcd_em_pt80to120],
+    keys=[
+        "/QCD_PT-80to120_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=30,
+    n_events=951227,
+)
+cpn.add_dataset(
+    name="qcd_em_pt120to170_pythia",
+    id=14801536,
+    processes=[procs.qcd_em_pt120to170],
+    keys=[
+        "/QCD_PT-120to170_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=36,
+    n_events=931334,
+)
+cpn.add_dataset(
+    name="qcd_em_pt170to300_pythia",
+    id=14808219,
+    processes=[procs.qcd_em_pt170to300],
+    keys=[
+        "/QCD_PT-170to300_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=24,
+    n_events=1007981,
+)
+cpn.add_dataset(
+    name="qcd_em_pt300toInf_pythia",
+    id=14802354,
+    processes=[procs.qcd_em_pt300toInf],
+    keys=[
+        "/QCD_PT-300toInf_EMEnriched_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=23,
+    n_events=908512,
+)
+
+
+#
+# QCD (pythia, pt-binned, double electron enriched)
+#
+
+
+cpn.add_dataset(
+    name="qcd_doubleem_pt30to40_pythia",
+    id=14801752,
+    # processes=[procs.qcd_doubleem_pt30to40],
+    keys=[
+        "/QCD_PT-30to40_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=54,
+    n_events=1425413,
+)
+cpn.add_dataset(
+    name="qcd_doubleem_pt30toInf_pythia",
+    id=14807962,
+    # processes=[procs.qcd_doubleem_pt30toInf],
+    keys=[
+        "/QCD_PT-30toInf_DoubleEMEnriched_MGG-40to80_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=38,
+    n_events=2875029,
+)
+cpn.add_dataset(
+    name="qcd_doubleem_pt40toInf_pythia",
+    id=14803826,
+    # processes=[procs.qcd_doubleem_pt40toInf],
+    keys=[
+        "/QCD_PT-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=26,
+    n_events=2947774,
+)
