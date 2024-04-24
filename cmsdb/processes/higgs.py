@@ -29,9 +29,11 @@ from cmsdb.util import multiply_xsecs
 
 # preliminary Higgs cross sections at 13.6 TeV taken from here:
 # https://cds.cern.ch/record/2886099/files/2402.09955.pdf
+# https://cds.cern.ch/record/2886099/files/LHCHWG-2024-001.pdf?version=2
 # Twiki of (currently outdated) 13.6 TeV Higgs cross sections (might be a useful source when updated):
 # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap?rev=5
 # TODO: h xsecs at 13 TeV
+
 
 h = Process(
     name="h",
@@ -51,7 +53,7 @@ h_ggf = h.add_process(
         13.6: Number(52.23, {  # value for mH=125 GeV
             "pdf": 0.032j,
             "th": (0.046j, 0.067j),
-            "th_gaussian": 0.039j,
+            "th_gaussian": 0.039,
         }),  # TODO: only preliminary
     },
 )
