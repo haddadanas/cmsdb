@@ -30,4 +30,3 @@ campaign_run3_2023_nano_v12 = Campaign(
 
 # trailing imports to load datasets
 import cmsdb.campaigns.run3_2023_nano_v12.data  # noqa
-
