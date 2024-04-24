@@ -10,6 +10,7 @@ __all__ = [
     "hh_ggf_bbtautau_node4", "hh_ggf_bbtautau_node5", "hh_ggf_bbtautau_node6",
     "hh_ggf_bbtautau_node7", "hh_ggf_bbtautau_node8", "hh_ggf_bbtautau_node9",
     "hh_ggf_bbtautau_node10", "hh_ggf_bbtautau_node11", "hh_ggf_bbtautau_node12",
+    "hh_vbf_bbtautau",
     "radion_hh_ggf_bbtautau",
     "radion_hh_ggf_bbtautau_m250", "radion_hh_ggf_bbtautau_m260", "radion_hh_ggf_bbtautau_m270",
     "radion_hh_ggf_bbtautau_m280", "radion_hh_ggf_bbtautau_m300", "radion_hh_ggf_bbtautau_m320",
@@ -65,9 +66,20 @@ import cmsdb.constants as const
 from cmsdb.util import multiply_xsecs
 
 from cmsdb.processes.higgs import (
-    hh_ggf, radion_hh_ggf, graviton_hh_ggf, radion_hh_vbf, graviton_hh_vbf,
+    hh_ggf, radion_hh_ggf, graviton_hh_ggf, radion_hh_vbf, graviton_hh_vbf, hh_vbf,
 )
 from cmsdb.xsec_bsm_nodes import calculate_xsec_node
+
+#
+# VBF -> HH
+#
+
+hh_vbf_bbtautau = hh_vbf.add_process(
+    name="hh_vbf_bbtautau",
+    id=22008,
+    xsecs=multiply_xsecs(hh_vbf, const.br_hh.bbtt),
+)
+
 #
 # ggF -> H -> HH
 #
@@ -76,7 +88,7 @@ hh_ggf_bbtautau = hh_ggf.add_process(
     name="hh_ggf_bbtautau",
     id=21100,
     label=r"$HH_{ggf} \rightarrow bb\tau\tau$",
-    xsecs=multiply_xsecs(hh_ggf, const.br_hh.bbtt)
+    xsecs=multiply_xsecs(hh_ggf, const.br_hh.bbtt),
 )
 
 hh_ggf_bbtautau_node1 = hh_ggf.add_process(
@@ -208,7 +220,7 @@ radion_hh_ggf_bbtautau = radion_hh_ggf.add_process(
     name="radion_hh_ggf_bbtautau",
     id=23100,
     label=rf"{radion_hh_ggf.label} $\rightarrow bb\tau\tau$",
-    xsecs=multiply_xsecs(radion_hh_ggf, const.br_hh.bbtt)
+    xsecs=multiply_xsecs(radion_hh_ggf, const.br_hh.bbtt),
 )
 
 radion_hh_ggf_bbtautau_m250 = radion_hh_ggf_bbtautau.add_process(
@@ -217,7 +229,7 @@ radion_hh_ggf_bbtautau_m250 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m260 = radion_hh_ggf_bbtautau.add_process(
@@ -226,7 +238,7 @@ radion_hh_ggf_bbtautau_m260 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m270 = radion_hh_ggf_bbtautau.add_process(
@@ -235,7 +247,7 @@ radion_hh_ggf_bbtautau_m270 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m280 = radion_hh_ggf_bbtautau.add_process(
@@ -244,7 +256,7 @@ radion_hh_ggf_bbtautau_m280 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m300 = radion_hh_ggf_bbtautau.add_process(
@@ -253,7 +265,7 @@ radion_hh_ggf_bbtautau_m300 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m320 = radion_hh_ggf_bbtautau.add_process(
@@ -262,7 +274,7 @@ radion_hh_ggf_bbtautau_m320 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m350 = radion_hh_ggf_bbtautau.add_process(
@@ -271,7 +283,7 @@ radion_hh_ggf_bbtautau_m350 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m400 = radion_hh_ggf_bbtautau.add_process(
@@ -280,7 +292,7 @@ radion_hh_ggf_bbtautau_m400 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m450 = radion_hh_ggf_bbtautau.add_process(
@@ -289,7 +301,7 @@ radion_hh_ggf_bbtautau_m450 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m500 = radion_hh_ggf_bbtautau.add_process(
@@ -298,7 +310,7 @@ radion_hh_ggf_bbtautau_m500 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m550 = radion_hh_ggf_bbtautau.add_process(
@@ -307,7 +319,7 @@ radion_hh_ggf_bbtautau_m550 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m600 = radion_hh_ggf_bbtautau.add_process(
@@ -316,7 +328,7 @@ radion_hh_ggf_bbtautau_m600 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m650 = radion_hh_ggf_bbtautau.add_process(
@@ -325,7 +337,7 @@ radion_hh_ggf_bbtautau_m650 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m700 = radion_hh_ggf_bbtautau.add_process(
@@ -334,7 +346,7 @@ radion_hh_ggf_bbtautau_m700 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m750 = radion_hh_ggf_bbtautau.add_process(
@@ -343,7 +355,7 @@ radion_hh_ggf_bbtautau_m750 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m800 = radion_hh_ggf_bbtautau.add_process(
@@ -352,7 +364,7 @@ radion_hh_ggf_bbtautau_m800 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m850 = radion_hh_ggf_bbtautau.add_process(
@@ -361,7 +373,7 @@ radion_hh_ggf_bbtautau_m850 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m900 = radion_hh_ggf_bbtautau.add_process(
@@ -370,7 +382,7 @@ radion_hh_ggf_bbtautau_m900 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m1000 = radion_hh_ggf_bbtautau.add_process(
@@ -379,7 +391,7 @@ radion_hh_ggf_bbtautau_m1000 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m1250 = radion_hh_ggf_bbtautau.add_process(
@@ -388,7 +400,7 @@ radion_hh_ggf_bbtautau_m1250 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m1500 = radion_hh_ggf_bbtautau.add_process(
@@ -397,7 +409,7 @@ radion_hh_ggf_bbtautau_m1500 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m1750 = radion_hh_ggf_bbtautau.add_process(
@@ -406,7 +418,7 @@ radion_hh_ggf_bbtautau_m1750 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m2000 = radion_hh_ggf_bbtautau.add_process(
@@ -415,7 +427,7 @@ radion_hh_ggf_bbtautau_m2000 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m2500 = radion_hh_ggf_bbtautau.add_process(
@@ -424,7 +436,7 @@ radion_hh_ggf_bbtautau_m2500 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 radion_hh_ggf_bbtautau_m3000 = radion_hh_ggf_bbtautau.add_process(
@@ -433,7 +445,7 @@ radion_hh_ggf_bbtautau_m3000 = radion_hh_ggf_bbtautau.add_process(
     xsecs={
         13: Number(0.1),    # TODO
         13.6: Number(0.1),  # TODO
-    },  
+    },
 )
 
 

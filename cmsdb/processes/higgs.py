@@ -163,7 +163,7 @@ ggzh = vh.add_process(
     id=14000,
     xsecs={
         13: Number(0.1),
-        13.6: Number(0.1360)
+        13.6: Number(0.1360),
     },  # TODO
 )
 
