@@ -22,7 +22,7 @@ cpn.add_dataset(
     ],
     n_files=165,
     n_events=138943783,
-    aus={
+    aux={
         "era": "C",
     },
 )
@@ -37,7 +37,7 @@ cpn.add_dataset(
     ],
     n_files=131,
     n_events=101615754,
-    aus={
+    aux={
         "era": "C",
     },
 )
@@ -52,7 +52,7 @@ cpn.add_dataset(
     ],
     n_files=32,
     n_events=21462916,
-    aus={
+    aux={
         "era": "D",
     },
 )
@@ -67,7 +67,7 @@ cpn.add_dataset(
     ],
     n_files=30,
     n_events=21463645,
-    aus={
+    aux={
         "era": "D",
     },
 )
@@ -87,7 +87,7 @@ cpn.add_dataset(
     ],
     n_files=70,
     n_events=45176805,
-    aus={
+    aux={
         "era": "C",
     },
 )
@@ -102,7 +102,7 @@ cpn.add_dataset(
     ],
     n_files=13,
     n_events=7246202,
-    aus={
+    aux={
         "era": "D",
     },
 )
