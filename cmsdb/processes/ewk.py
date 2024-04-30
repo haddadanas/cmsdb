@@ -7,6 +7,7 @@ EWK-related process definitions.
 __all__ = [
     "dy",
     "dy_lep",
+    "dy_lep_m10",
     "dy_lep_m50", "dy_lep_m50_1j", "dy_lep_m50_2j", "dy_lep_m50_3j", "dy_lep_m50_4j",
     "dy_lep_0j", "dy_lep_1j", "dy_lep_2j",
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
@@ -85,6 +86,15 @@ dy_lep_m50 = dy_lep.add_process(
             "pdf": 0.01j,
         }),
     },
+)
+
+dy_lep_m10 = dy_lep.add_process(
+    name="dy_lep_m10",
+    id=51101,
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 

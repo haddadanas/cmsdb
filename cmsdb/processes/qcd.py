@@ -45,6 +45,7 @@ __all__ = [
     "qcd_mu_pt800to1000",
     "qcd_mu_pt1000",
     "qcd_em",
+    "qcd_em_pt10to30",
     "qcd_em_pt15to20",
     "qcd_em_pt20to30",
     "qcd_em_pt30to50",
@@ -545,6 +546,15 @@ qcd_em_pt300toInf = qcd_em.add_process(
     },
 )
 
+qcd_em_pt10to30 = qcd.add_process(
+    name="qcd_em_pt10to30",
+    id=31209,
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },
+)
+
 #
 # QCD pT-binned (bcToE)
 #
@@ -609,6 +619,34 @@ qcd_bctoe_pt250toInf = qcd_bctoe.add_process(
     id=31306,
     xsecs={
         13: Number(562.5),
+        13.6: Number(0.1),
+    },
+)
+
+# QCD Double EM enriched
+qcd_doubleem_pt30to40 = qcd.add_process(
+    name="qcd_doubleem_pt30to40",
+    id=31401,
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },
+)
+
+qcd_doubleem_pt40toInf = qcd.add_process(
+    name="qcd_doubleem_pt40toInf",
+    id=31402,
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },
+)
+
+qcd_doubleem_pt30toInf = qcd.add_process(
+    name="qcd_doubleem_pt30toInf",
+    id=31403,
+    xsecs={
+        13: Number(0.1),
         13.6: Number(0.1),
     },
 )
