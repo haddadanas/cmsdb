@@ -61,6 +61,9 @@ __all__ = [
     "qcd_bctoe_pt80to170",
     "qcd_bctoe_pt170to250",
     "qcd_bctoe_pt250toInf",
+    "qcd_doubleem_pt30to40",
+    "qcd_doubleem_pt40toInf",
+    "qcd_doubleem_pt30toInf",
 ]
 
 from order import Process
