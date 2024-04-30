@@ -179,7 +179,8 @@ wmh_tautau = wmh.add_process(
     xsecs=multiply_xsecs(wmh, const.br_h.tt),
 )
 
-vh.set_xsec(13.6, zh.get_xsec(13.6) + wph.get_xsec(13.6) + wmh.get_xsec(13.6))
+for cme in [13, 13.6]:
+    vh.set_xsec(cme, zh.get_xsec(cme) + wph.get_xsec(cme) + wmh.get_xsec(cme))
 
 ggzh = vh.add_process(
     name="ggzh",
@@ -189,15 +190,14 @@ ggzh = vh.add_process(
             "scale": (0.251j, 0.189j),
             "pdf": 0.019j,
         }),
+        13.6: Number(0.1),  # TODO
     },
 )
 
 ggzh_llbb = ggzh.add_process(
     name="ggzh_llbb",
     id=14100,
-    xsecs={
-        13: ggzh.get_xsec(13) * const.br_h.bb * const.br_z.clep,
-    },  # TODO
+    xsecs=multiply_xsecs(ggzh, const.br_h.bb * const.br_z.clep),
 )
 
 tth = h.add_process(
@@ -251,7 +251,11 @@ hh = Process(
     name="hh",
     id=20000,
     label="HH",
-    xsecs={13: Number(0.1)})  # TODO
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },
+)
 
 hh_ggf = hh.add_process(
     name="hh_ggf",
@@ -262,9 +266,15 @@ hh_ggf = hh.add_process(
             "pdf": 0.03j,
             "scale": (0.06j, 0.23j),
         }),
-        14: Number(34.43,
-    {"pdf": 0.03j, "scale": (0.06j, 0.23j)})},  # fb
+        14: Number(34.43, {
+            "pdf": 0.03j,
+            "scale": (0.06j, 0.23j),
+        }),
+    },  # fb
 )
+
+#  According to https://arxiv.org/html/2402.09955v1
+hh_ggf.set_xsec(13.6, 0.4 * hh_ggf.get_xsec(13) + 0.6 * hh_ggf.get_xsec(14))
 
 # Naming conventions, cross sections and uncertainties are based on:
 # https://gitlab.cern.ch/hh/naming-conventions

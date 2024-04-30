@@ -74,7 +74,10 @@ qcd = Process(
     name="qcd",
     id=30000,
     label="QCD",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 
@@ -86,7 +89,10 @@ qcd_flat = Process(
     name="qcd_flat",
     id=30001,
     label="QCD",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 
@@ -100,6 +106,7 @@ qcd_ht50to100 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(185900000),
+        13.6: Number(0.1),
     },
 )
 
@@ -109,6 +116,7 @@ qcd_ht100to200 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(23610000),
+        13.6: Number(0.1),
     },
 )
 
@@ -118,6 +126,7 @@ qcd_ht200to300 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(1551000),
+        13.6: Number(0.1),
     },
 )
 
@@ -127,6 +136,7 @@ qcd_ht300to500 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(324300),
+        13.6: Number(0.1),
     },
 )
 
@@ -136,6 +146,7 @@ qcd_ht500to700 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(30340),
+        13.6: Number(0.1),
     },
 )
 
@@ -145,6 +156,7 @@ qcd_ht700to1000 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(6440),
+        13.6: Number(0.1),
     },
 )
 
@@ -154,6 +166,7 @@ qcd_ht1000to1500 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(1118),
+        13.6: Number(0.1),
     },
 )
 
@@ -163,6 +176,7 @@ qcd_ht1500to2000 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(108),
+        13.6: Number(0.1),
     },
 )
 
@@ -172,6 +186,7 @@ qcd_ht2000 = qcd.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(22),
+        13.6: Number(0.1),
     },
 )
 
@@ -187,6 +202,7 @@ qcd_pt15to30 = qcd.add_process(
     id=31901,
     xsecs={
         13: Number(1821000000),
+        13.6: Number(0.1),
     },
 )
 
@@ -195,6 +211,7 @@ qcd_pt30to50 = qcd.add_process(
     id=31902,
     xsecs={
         13: Number(138800000),
+        13.6: Number(0.1),
     },
 )
 
@@ -203,6 +220,7 @@ qcd_pt50to80 = qcd.add_process(
     id=31903,
     xsecs={
         13: Number(19110000),
+        13.6: Number(0.1),
     },
 )
 
@@ -211,6 +229,7 @@ qcd_pt80to120 = qcd.add_process(
     id=31904,
     xsecs={
         13: Number(2735000),
+        13.6: Number(0.1),
     },
 )
 
@@ -219,6 +238,7 @@ qcd_pt120to170 = qcd.add_process(
     id=31905,
     xsecs={
         13: Number(466200),
+        13.6: Number(0.1),
     },
 )
 
@@ -227,6 +247,7 @@ qcd_pt170to300 = qcd.add_process(
     id=31906,
     xsecs={
         13: Number(117200),
+        13.6: Number(0.1),
     },
 )
 
@@ -235,6 +256,7 @@ qcd_pt300to470 = qcd.add_process(
     id=31907,
     xsecs={
         13: Number(7763),
+        13.6: Number(0.1),
     },
 )
 
@@ -243,6 +265,7 @@ qcd_pt470to600 = qcd.add_process(
     id=31908,
     xsecs={
         13: Number(641),
+        13.6: Number(0.1),
     },
 )
 
@@ -251,6 +274,7 @@ qcd_pt600to800 = qcd.add_process(
     id=31909,
     xsecs={
         13: Number(185.7),
+        13.6: Number(0.1),
     },
 )
 
@@ -259,6 +283,7 @@ qcd_pt800to1000 = qcd.add_process(
     id=31910,
     xsecs={
         13: Number(32.02),
+        13.6: Number(0.1),
     },
 )
 
@@ -267,6 +292,7 @@ qcd_pt1000to1400 = qcd.add_process(
     id=31911,
     xsecs={
         13: Number(9.375),
+        13.6: Number(0.1),
     },
 )
 
@@ -275,6 +301,7 @@ qcd_pt1400to1800 = qcd.add_process(
     id=31912,
     xsecs={
         13: Number(0.8384),
+        13.6: Number(0.1),
     },
 )
 
@@ -283,6 +310,7 @@ qcd_pt1800to2400 = qcd.add_process(
     id=31913,
     xsecs={
         13: Number(0.1133),
+        13.6: Number(0.1),
     },
 )
 
@@ -291,6 +319,7 @@ qcd_pt2400to3200 = qcd.add_process(
     id=31914,
     xsecs={
         13: Number(0.006746),
+        13.6: Number(0.1),
     },
 )
 
@@ -299,6 +328,7 @@ qcd_pt3200 = qcd.add_process(
     id=31915,
     xsecs={
         13: Number(0.0001623),
+        13.6: Number(0.1),
     },
 )
 
@@ -309,7 +339,10 @@ qcd_pt3200 = qcd.add_process(
 qcd_mu = qcd.add_process(
     name="qcd_mu",
     id=31100,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 # 13 TeV xsecs based on datasets QCD_Pt-{i}To{j}_MuEnrichedPt5_TuneCP5_13TeV-pythia8 (Summer20UL16)
@@ -374,6 +407,7 @@ qcd_mu_pt170to300 = qcd_mu.add_process(
     id=31107,
     xsecs={
         13: Number(7019.0),
+        13.6: Number(0.1),
         # 13.6: missing in XSDB
     },
 )
@@ -392,6 +426,7 @@ qcd_mu_pt470to600 = qcd_mu.add_process(
     id=31109,
     xsecs={
         13: Number(58.86),
+        13.6: Number(0.1),
         # 13.6: missing in XSDB
     },
 )
@@ -419,6 +454,7 @@ qcd_mu_pt1000 = qcd_mu.add_process(
     id=31112,
     xsecs={
         13: Number(1.08),  # NOTE: not found via XSDB, taken from an old reference
+        13.6: Number(0.1),
         # 13.6: missing in XSDB
     },
 )
@@ -430,7 +466,10 @@ qcd_mu_pt1000 = qcd_mu.add_process(
 qcd_em = qcd.add_process(
     name="qcd_em",
     id=31200,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 # based on datasets QCD_Pt-{i}to{j}_EMEnriched_TuneCP5_13TeV-pythia8 (Summer20UL16)
@@ -440,6 +479,7 @@ qcd_em_pt15to20 = qcd_em.add_process(
     id=31201,
     xsecs={
         13: Number(1324000.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -448,6 +488,7 @@ qcd_em_pt20to30 = qcd_em.add_process(
     id=31202,
     xsecs={
         13: Number(4896000.0),
+        13.6: Number(0.1),
     },
 )
 qcd_em_pt30to50 = qcd_em.add_process(
@@ -455,6 +496,7 @@ qcd_em_pt30to50 = qcd_em.add_process(
     id=31203,
     xsecs={
         13: Number(6447000.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -463,6 +505,7 @@ qcd_em_pt50to80 = qcd_em.add_process(
     id=31204,
     xsecs={
         13: Number(1988000.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -471,6 +514,7 @@ qcd_em_pt80to120 = qcd_em.add_process(
     id=31205,
     xsecs={
         13: Number(367500.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -479,6 +523,7 @@ qcd_em_pt120to170 = qcd_em.add_process(
     id=31206,
     xsecs={
         13: Number(66590.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -487,6 +532,7 @@ qcd_em_pt170to300 = qcd_em.add_process(
     id=31207,
     xsecs={
         13: Number(16620.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -495,6 +541,7 @@ qcd_em_pt300toInf = qcd_em.add_process(
     id=31208,
     xsecs={
         13: Number(1104.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -505,7 +552,10 @@ qcd_em_pt300toInf = qcd_em.add_process(
 qcd_bctoe = qcd.add_process(
     name="qcd_bctoe",
     id=31300,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 # based on datasets QCD_Pt_{i}to{j}_bcToE_TuneCP5_13TeV_pythia8 (Autumn18 (pt15to20) or Fall17 (all other))
@@ -515,6 +565,7 @@ qcd_bctoe_pt15to20 = qcd_bctoe.add_process(
     id=31301,
     xsecs={
         13: Number(186200.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -523,6 +574,7 @@ qcd_bctoe_pt20to30 = qcd_bctoe.add_process(
     id=31302,
     xsecs={
         13: Number(303800.0),
+        13.6: Number(0.1),
     },
 )
 qcd_bctoe_pt30to80 = qcd_bctoe.add_process(
@@ -530,6 +582,7 @@ qcd_bctoe_pt30to80 = qcd_bctoe.add_process(
     id=31303,
     xsecs={
         13: Number(362300.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -538,6 +591,7 @@ qcd_bctoe_pt80to170 = qcd_bctoe.add_process(
     id=31304,
     xsecs={
         13: Number(33700.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -546,6 +600,7 @@ qcd_bctoe_pt170to250 = qcd_bctoe.add_process(
     id=31305,
     xsecs={
         13: Number(2125.0),
+        13.6: Number(0.1),
     },
 )
 
@@ -554,5 +609,6 @@ qcd_bctoe_pt250toInf = qcd_bctoe.add_process(
     id=31306,
     xsecs={
         13: Number(562.5),
+        13.6: Number(0.1),
     },
 )
