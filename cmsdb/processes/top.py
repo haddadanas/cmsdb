@@ -94,8 +94,8 @@ tt_fh = tt.add_process(
 # Ref https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36#Single_top_Wt_channel_cross_sect
 #
 # 13.6 TeV source: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
-# 13 TeV s-channel cross sections from here:
-# https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopSigma?rev=12#Single_Top_Cross_sections_at_13?rev=12
+# 13.6 TeV s-channel cross sections from here:
+# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20#Single_top_s_channel
 
 st = Process(
     name="st",
@@ -253,7 +253,9 @@ st_schannel = st.add_process(
             "mtop": (0.23, 0.22),
             "E_beam": 0.01,
         }),
-        # TODO: 13.6 TeV xsecs
+        13.6: Number(7.246, {
+            "scale": (0.059, 0.043),
+        }),
     },
 )
 
@@ -279,7 +281,7 @@ st_schannel_t = st_schannel.add_process(
             "mtop": (0.14, 0.13),
             "E_beam": 0.01,
         }),
-        # TODO: 13.6 TeV xsecs
+        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -305,7 +307,7 @@ st_schannel_tbar = st_schannel.add_process(
             "mtop": 0.09,
             "E_beam": 0.01,
         }),
-        # TODO: 13.6 TeV xsecs
+        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -322,10 +324,11 @@ st_schannel_tbar_had = st_schannel_tbar.add_process(
 )
 
 # define the combined single top cross section as the sum of the three channels
-st.set_xsec(
-    13,
-    st_tchannel.get_xsec(13) + st_twchannel.get_xsec(13) + st_schannel.get_xsec(13),
-)
+for ecm in (13, 13.6):
+    st.set_xsec(
+        ecm,
+        st_tchannel.get_xsec(ecm) + st_twchannel.get_xsec(ecm) + st_schannel.get_xsec(ecm),
+    )
 
 
 #
@@ -355,6 +358,7 @@ ttz = ttv.add_process(
             "scale": (0.088j, 0.099j),
             "pdf": 0.031j,
         }),
+        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -368,6 +372,7 @@ ttz_llnunu_m10 = ttz.add_process(
         13: Number(0.2439, {
             "total": 0.0002995,
         }),
+        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -387,11 +392,12 @@ ttw = ttv.add_process(
             "scale": (0.264j, 0.164j),
             "pdf": 0.036j,
         }),
+        13.6: Number(0.1),  # TODO
     },
 )
 
 # set combined cross sections
-for ecm in (13, 14):
+for ecm in (13, 13.6, 14):
     ttv.set_xsec(ecm, ttw.get_xsec(ecm) + ttz.get_xsec(ecm))
 
 ttw_lnu = ttw.add_process(
@@ -427,6 +433,7 @@ ttzz = ttvv.add_process(
             "scale": (0.052j, 0.090j),
             "pdf": 0.026j,
         }),
+        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -438,6 +445,7 @@ ttwz = ttvv.add_process(
             Number(2705E-6, {"scale": (0.099j, 0.106j), "pdf": 0.027j}) +
             Number(1179E-6, {"scale": 0.112j, "pdf": 0.037j})
         ),
+        13.6: Number(0.1),  # TODO
     },
 )
 
@@ -449,11 +457,13 @@ ttww = ttvv.add_process(
             "scale": (0.332j, 0.231j),
             "pdf": 0.030j,
         }),
+        13.6: Number(0.1),  # TODO
     },
 )
 
 # define the combined ttvv cross section as the sum of the three channels
-ttvv.set_xsec(
-    13,
-    ttzz.get_xsec(13) + ttwz.get_xsec(13) + ttww.get_xsec(13),
-)
+for ecm in (13, 13.6):
+    ttvv.set_xsec(
+        ecm,
+        ttzz.get_xsec(ecm) + ttwz.get_xsec(ecm) + ttww.get_xsec(ecm),
+    )
