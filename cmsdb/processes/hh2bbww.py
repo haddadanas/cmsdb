@@ -90,6 +90,10 @@ ggHH_sl_hbbhww = ggHH_hbbhww.add_process(
     name="ggHH_sl_hbbhww",
     id=21210,
     label=r"$HH_{ggf} \rightarrow bbWW(qql\nu)$",
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 ggHH_kl_0_kt_1_sl_hbbhww = ggHH_kl_0_kt_1.add_process(
@@ -134,6 +138,10 @@ ggHH_dl_hbbhww = ggHH_hbbhww.add_process(
     name="ggHH_dl_hbbhww",
     id=21220,
     label=r"$HH_{ggf} \rightarrow bbWW(l\nu l\nu)$",
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 ggHH_kl_0_kt_1_dl_hbbhww = ggHH_kl_0_kt_1.add_process(
@@ -179,6 +187,10 @@ qqHH_sl_hbbhww = qqHH_hbbhww.add_process(
     name="qqHH_sl_hbbhww",
     label=r"$HH_{vbf} \rightarrow bbWW(qql\nu)$",
     id=22210,
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 qqHH_CV_1_C2V_1_kl_1_sl_hbbhww = qqHH_CV_1_C2V_1_kl_1.add_process(
@@ -247,6 +259,10 @@ qqHH_dl_hbbhww = qqHH_hbbhww.add_process(
     name="qqHH_dl_hbbhww",
     label=r"$HH_{vbf} \rightarrow bbWW(l\nu l\nu)$",
     id=22220,
+    xsecs={
+        13: Number(0.1),
+        13.6: Number(0.1),
+    },  # TODO
 )
 
 qqHH_CV_1_C2V_1_kl_1_dl_hbbhww = qqHH_CV_1_C2V_1_kl_1.add_process(
