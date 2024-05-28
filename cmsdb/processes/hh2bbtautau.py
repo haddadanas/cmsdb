@@ -77,6 +77,7 @@ from cmsdb.xsec_bsm_nodes import calculate_xsec_node
 hh_vbf_bbtautau = hh_vbf.add_process(
     name="hh_vbf_bbtautau",
     id=22008,
+    label=r"$HH_{vbf} \rightarrow bb\tau\tau$",
     xsecs=multiply_xsecs(hh_vbf, const.br_hh.bbtt),
 )
 
