@@ -84,13 +84,13 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="bsm_hh_ggf_bbtautau_kl2p45_kt1_powheg",
-    id=14805306,
+    id=14952817,
     processes=[procs.hh_ggf_bbtautau],
     keys=[
-        "/GluGlutoHHto2B2Tau_kl-2p45_kt-1p00_c2-0p00_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-Poisson60KeepRAW_130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+        "/GluGlutoHHto2B2Tau_kl-2p45_kt-1p00_c2-0p00_LHEweights_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=100000,
+    n_files=362,
+    n_events=3435020,
 )
 
 cpn.add_dataset(
