@@ -24,6 +24,7 @@ cpn.add_dataset(
     n_events=138427345,
     aux={
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -39,6 +40,7 @@ cpn.add_dataset(
     n_events=75468381,
     aux={
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -59,6 +61,7 @@ cpn.add_dataset(
     n_events=25875389,
     aux={
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -74,6 +77,7 @@ cpn.add_dataset(
     n_events=16686692,
     aux={
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -94,6 +98,7 @@ cpn.add_dataset(
     n_events=263689151,
     aux={
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -109,6 +114,7 @@ cpn.add_dataset(
     n_events=89134996,
     aux={
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -128,6 +134,7 @@ cpn.add_dataset(
     n_events=218,
     aux={
         "era": "A",
+        "jec_era": "RunCD",
     },
 )
 
