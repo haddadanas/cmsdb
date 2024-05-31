@@ -12,6 +12,7 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 # Muon
 #
 
+
 cpn.add_dataset(
     name="data_mu_c",
     id=14784127,
@@ -48,6 +49,7 @@ cpn.add_dataset(
 #
 # Tau
 #
+
 
 cpn.add_dataset(
     name="data_tau_c",
@@ -86,6 +88,37 @@ cpn.add_dataset(
 # E/Gamma
 #
 
+
+cpn.add_dataset(
+    name="data_egamma_a",
+    id=14783268,
+    is_data=True,
+    processes=[procs.data_egamma],
+    keys=[
+        "/EGamma/Run2022A-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=5,
+    n_events=186,
+    aux={
+        "era": "A",
+    },
+)
+
+cpn.add_dataset(
+    name="data_egamma_b",
+    id=14826835,
+    is_data=True,
+    processes=[procs.data_egamma],
+    keys=[
+        "/EGamma/Run2022B-22Sep2023-v2/NANOAOD",  # noqa
+    ],
+    n_files=14,
+    n_events=11074301,
+    aux={
+        "era": "B",
+    },
+)
+
 cpn.add_dataset(
     name="data_egamma_c",
     id=14784140,
@@ -118,9 +151,11 @@ cpn.add_dataset(
     },
 )
 
+
 #
 # MET
 #
+
 
 cpn.add_dataset(
     name="data_met_a",
@@ -168,9 +203,11 @@ cpn.add_dataset(
     },
 )
 
+
 #
 # JET HT
 #
+
 
 cpn.add_dataset(
     name="data_jetht_a",
@@ -216,3 +253,70 @@ cpn.add_dataset(
         "era": "C",
     },
 )
+
+
+#
+# MuonEG
+#
+
+
+cpn.add_dataset(
+    name="data_muoneg_a",
+    id=14783289,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022A-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=5,
+    n_events=12,
+    aux={
+        "era": "A",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_b",
+    id=14784076,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022B-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=7,
+    n_events=254803,
+    aux={
+        "era": "B",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_c",
+    id=14784125,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=28,
+    n_events=15768439,
+    aux={
+        "era": "C",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_d",
+    id=14784209,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022D-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=16,
+    n_events=8007031,
+    aux={
+        "era": "D",
+    },
+)
+
